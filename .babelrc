@@ -1,0 +1,9 @@
+{
+    "presets": [
+      "@babel/preset-env", // Transpile modern JavaScript features to be compatible with target environments
+      "@babel/preset-react" // Enable JSX and React specific transformations
+    ],
+    "plugins": [
+      // Add any additional plugins you need
+    ]
+  }

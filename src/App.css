@@ -1,0 +1,28 @@
+/* stylings for App component */
+h1 {
+    color: green;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.plusButton {
+    border: 2px solid;
+    padding: 1rem;
+    margin-left: 10%;
+}
+.minusButton {
+    border: 2px solid;
+    padding: 1rem;
+    margin-right: 10%;
+}
+.count {
+    border: 2px solid black;
+    border: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5rem;
+}
