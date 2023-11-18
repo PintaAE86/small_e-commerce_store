@@ -1,12 +1,12 @@
-import React from "react";
-import "./App.css";
-import Counter from "./Counter.js";
-const App = () =>{
-    return (
-        <div>
-            <h1>Counter Application</h1>
-            <Counter />
-        </div>
-    )
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+    </div>
+  );
 }
+
 export default App;
