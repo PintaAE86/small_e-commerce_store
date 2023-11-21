@@ -7,18 +7,28 @@ module.exports = {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, "dist/"),
-      publicPath: "/dist/",
+      publicPath: "/",
       filename: "bundle.js"
+    },
+    resolve: {
+      extensions: ['.js', '.jsx'],
     },
     module : {
         rules : [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
+                  use: {
                   loader: 'babel-loader',//npm install babel-loader @babel/core @babel/preset-env --save-dev
                 },
               },
+                {
+                    test: /\.jsx$/,
+                    exclude: /node_modules/,
+                      use: {
+                        loader: 'babel-loader'
+                      }
+                },
               // Use style-loader and css-loader for handling CSS files
               {
                 test: /\.css$/,
@@ -33,12 +43,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-          template: 'public/index.html',
+          template: 'public/index.html'
+          
         }),
       ],
     devServer: {
         static: path.resolve(__dirname, 'public'),
         port: 3000,
         open: true,
+        historyApiFallback: true,
     }
+    //when using a server to access the file on the same project, you need to understand proxies better 
 }
